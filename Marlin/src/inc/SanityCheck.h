@@ -1206,6 +1206,7 @@ static_assert(Y_MAX_LENGTH >= Y_BED_SIZE, "Movement bounds (Y_MIN_POS, Y_MAX_POS
 /**
  * Make sure Z_SAFE_HOMING point is reachable
  */
+/*
 #if ENABLED(Z_SAFE_HOMING)
   #if HAS_BED_PROBE
     static_assert(WITHIN(Z_SAFE_HOMING_X_POINT, MIN_PROBE_X, MAX_PROBE_X), "Z_SAFE_HOMING_X_POINT is outside the probe region.");
@@ -1215,6 +1216,7 @@ static_assert(Y_MAX_LENGTH >= Y_BED_SIZE, "Movement bounds (Y_MIN_POS, Y_MAX_POS
     static_assert(WITHIN(Z_SAFE_HOMING_Y_POINT, Y_MIN_POS, Y_MAX_POS), "Z_SAFE_HOMING_Y_POINT can't be reached by the nozzle.");
   #endif
 #endif // Z_SAFE_HOMING
+*/
 
 /**
  * Make sure DISABLE_[XYZ] compatible with selected homing options

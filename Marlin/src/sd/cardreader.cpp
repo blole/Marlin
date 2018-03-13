@@ -429,7 +429,7 @@ void CardReader::openFile(char * const path, const bool read, const bool subcall
     if (subcall) {
       if (file_subcall_ctr > SD_PROCEDURE_DEPTH - 1) {
         SERIAL_ERROR_MSG("trying to call sub-gcode files with too many levels. MAX level is:" STRINGIFY(SD_PROCEDURE_DEPTH));
-        kill();
+        kill(PSTR("killed by trying to call sub-gcode files with too many levels"));
         return;
       }
 

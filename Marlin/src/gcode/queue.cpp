@@ -663,7 +663,7 @@ inline void get_serial_commands() {
               wait_for_user = false;
             #endif
           }
-          if (strcmp(command, "M112") == 0) kill();
+          if (strcmp(command, "M112") == 0) kill(PSTR("killed by M112"));
           if (strcmp(command, "M410") == 0) quickstop_stepper();
         #endif
 
